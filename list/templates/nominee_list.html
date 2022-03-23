@@ -1,0 +1,31 @@
+{% load static  %}
+
+    <head>
+        <title>Berko list</title>
+    </head>
+
+      <header id="showcase">
+    <h1>Основной Список</h1>
+    <div>
+            <ol style="list-style-type: none;">
+                {% for nominee in search_result.list %}
+                <li>{{nominee.standings|safe}}.{{nominee.full_name|safe}}</li>
+                {% endfor %}
+            </ol>
+            </div>
+  </header>
+  <section id="section-a">
+    <p>{{ search_result.div1.text}}</p>
+  </section>
+
+  <section id="section-b">
+    <p>{{ search_result.div2.text }}</p>
+  </section>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="{% static 'css/nominee_list.css' %}">
